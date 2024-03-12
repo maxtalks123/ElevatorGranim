@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevator</title>
+    <canvas id="granimbg"></canvas>
+    <script src="/node_modules/granim/dist/granim.min.js"></script>
+    <script>
+      let granimInstance = new Granim({
+        element: "#granimbg",
+        direction: "top-bottom",
+        isPausedWhenNotInView: true,
+        image: {
+          source: "elevator.jpeg",
+          blendingMode: "multiply",
+        },
+        states: {
+          "default-state": {
+            gradients: [
+              ["#29323c", "#485563"],
+              ["#FF6B6B", "#556270"],
+              ["#80d3fe", "#7ea0c4"],
+              ["#f0ab51", "#eceba3"],
+            ],
+            transitionSpeed: 7000,
+          },
+        },
+      });
+    </script>
+    <link rel="stylesheet" href="granimbg.css">
+  </head>
+  <body>
+    <script src="elevator.js">
+        
+    </script>
+          
+          <h1>Elevator.js</h1>
+          <p>
+            Elevator.js fixes those awkward "scroll to top" moments the old fashioned
+            way.
+          </p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>First we need to get to the bottom of the page.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>Because you're already at the top.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>So a "back to top" button wouldn't make sense.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>Down down down.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>Wow, all this scrolling.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>This had better be worth it.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>It's going to take ages to get back to the top.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>If only we had an easy way to get back...</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>...that is both functional and fun.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>I call "back to top" buttons elevators...</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>...they should really behave more like them.</p>
+
+          <div class="down-arrow">&#9660;</div>
+          <p>Ok, here we are... click that elevator!</p>
+          <p>
+            This is a elevator page.
+
+
+
+
+
+            We found this hard to implement
+            <br>
+            Keep scrolling down
+
+
+            <br>
+
+
+
+            <br>
+
+
+
+            <br>
+            Keep going
+
+
+
+
+
+            <br>
+
+
+            Here we are
+          </p>
+
+                  <div class="footer">
+                      <div class="do-the-thing">
+                          <div class="elevator">
+                               <button class="elevatorButton">Push this button for music</button>
+                          </div>
+                      </div>
+                  </div>
+
+          </div>
+          <script>
+            let elementButton = document.querySelector(".elevatorButton");
+            let elevator = new Elevator({
+              element: elementButton,
+              mainAudio: "demo_music_elevator.mp3",
+              endAudio: "ding.mp3",
+            });
+    </script>
+  </body>
+</html>
